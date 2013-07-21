@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.Source = new System.Windows.Forms.TextBox();
-            this.RegExpSrc = new System.Windows.Forms.TextBox();
+            this.Pattern = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.Progress = new System.Windows.Forms.ProgressBar();
             this.ResultGrid = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,14 +51,16 @@
             this.Source.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Source.Size = new System.Drawing.Size(416, 88);
             this.Source.TabIndex = 0;
+            this.Source.Text = "http://www.cmsplanet.ru/";
             // 
-            // RegExpSrc
+            // Pattern
             // 
-            this.RegExpSrc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RegExpSrc.Location = new System.Drawing.Point(489, 10);
-            this.RegExpSrc.Name = "RegExpSrc";
-            this.RegExpSrc.Size = new System.Drawing.Size(291, 20);
-            this.RegExpSrc.TabIndex = 1;
+            this.Pattern.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pattern.Location = new System.Drawing.Point(489, 10);
+            this.Pattern.Name = "Pattern";
+            this.Pattern.Size = new System.Drawing.Size(291, 20);
+            this.Pattern.TabIndex = 1;
+            this.Pattern.Text = "<[^>]*?>";
             // 
             // label1
             // 
@@ -70,13 +72,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "RegExp:";
             // 
-            // progressBar1
+            // Progress
             // 
-            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(438, 73);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(342, 27);
-            this.progressBar1.TabIndex = 3;
+            this.Progress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Progress.Location = new System.Drawing.Point(438, 73);
+            this.Progress.Name = "Progress";
+            this.Progress.Size = new System.Drawing.Size(342, 27);
+            this.Progress.TabIndex = 3;
             // 
             // ResultGrid
             // 
@@ -101,6 +103,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(705, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -117,9 +120,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ResultGrid);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.Progress);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.RegExpSrc);
+            this.Controls.Add(this.Pattern);
             this.Controls.Add(this.Source);
             this.Name = "Form1";
             this.Text = "PageParser";
@@ -132,9 +135,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox Source;
-        private System.Windows.Forms.TextBox RegExpSrc;
+        private System.Windows.Forms.TextBox Pattern;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar Progress;
         private System.Windows.Forms.DataGridView ResultGrid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
