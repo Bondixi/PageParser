@@ -1,5 +1,5 @@
 PageParser
 ==========
 
-Web pages parser
+List of web pages parser
 
